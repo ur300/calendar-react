@@ -64,7 +64,7 @@ export const CalendarWeekView = ({ date, events, onDateSelect, onEventClick }: C
 
   return (
     <Box className={styles.weekView}>
-      <WeekHeader weekDays={weekDays} onDateSelect={onDateSelect} />
+      <WeekHeader weekDays={weekDays} />
 
       <Grid gutter={0} columns={8} className={styles.row}>
         <Grid.Col span={1} className={classNames(styles.firstCol, styles.allDayCol)}>
