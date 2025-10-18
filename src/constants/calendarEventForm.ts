@@ -1,0 +1,4 @@
+export const MAX_DESCRIPTION_LENGTH = 500;
+export const MAX_TITLE_LENGTH = 40;
+export const MAX_LOCATION_LENGTH = 30;
+export const MAX_EVENT_DESCRIPTION_LENGTH = 150;

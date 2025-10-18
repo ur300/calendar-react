@@ -1,0 +1,40 @@
+@use './variables'
+
+@mixin respond-to($breakpoint)
+  @if $breakpoint == xs
+    @media (min-width: variables.$breakpoint-xs)
+      @content
+  @else if $breakpoint == sm
+    @media (min-width: variables.$breakpoint-sm)
+      @content
+  @else if $breakpoint == md
+    @media (min-width: variables.$breakpoint-md)
+      @content
+  @else if $breakpoint == lg
+    @media (min-width: variables.$breakpoint-lg)
+      @content
+  @else if $breakpoint == xl
+    @media (min-width: variables.$breakpoint-xl)
+      @content
+
+@mixin text-truncate
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+@mixin text-truncate-multiline($lines: 2)
+  display: -webkit-box
+  -webkit-line-clamp: $lines
+  -webkit-box-orient: vertical
+  overflow: hidden
+  text-overflow: ellipsis
+
+@mixin content-wrapper($breakpoint: 'lg', $hasSpacings: true)
+  padding-bottom: variables.$side-spacing-mobile
+
+  @if $hasSpacings
+    padding-top: variables.$spacing-12
+    padding-inline: variables.$side-spacing-mobile
+
+  @include respond-to($breakpoint)
+    padding: variables.$side-spacing-desktop

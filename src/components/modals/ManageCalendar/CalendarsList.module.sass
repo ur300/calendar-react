@@ -1,0 +1,40 @@
+@use '@/styles/variables'
+@use '@/styles/colors'
+@use '@/styles/fonts'
+
+.item
+  padding: variables.$spacing-12 variables.$spacing-16
+  border: 1px solid var(--mantine-color-gray-3)
+  border-radius: var(--mantine-radius-md)
+  margin-bottom: variables.$spacing-16
+
+.itemOpen
+  border-width: 2px
+  border-color: var(--mantine-color-brand-5)
+  border-radius: var(--mantine-radius-lg)
+
+.itemInfo
+  display: flex
+  align-items: center
+  justify-content: space-between
+  width: 100%
+  
+.title
+  @include fonts.font-pair(18, 24)
+  color: var(--mantine-color-base-7)
+  font-weight: 600
+  display: flex
+  align-items: center
+  gap: variables.$spacing-4
+  margin-bottom: variables.$spacing-4
+
+.text
+  @include fonts.font-pair(14, 20)
+  color: var(--mantine-color-base-6)
+
+.calendarDot
+  display: flex
+  align-items: center
+  justify-content: center
+  margin-right: variables.$spacing-4
+  color: var(--calendar-dot-color)

@@ -1,0 +1,20 @@
+@use '@/styles/variables'
+
+.allDayEvents
+  display: flex
+  flex-direction: column
+  gap: variables.$spacing-4
+
+.event
+  padding: variables.$spacing-4 variables.$spacing-8
+  &:hover
+    cursor: pointer
+
+.eventTitle
+  font-weight: 500
+
+.eventLocation
+  opacity: 0.8
+
+.actionButtons
+  gap: variables.$spacing-8

@@ -1,0 +1,35 @@
+@use '@/styles/colors';
+@use '@/styles/fonts';
+@use '@/styles/variables';
+
+.comboboxWrap
+  .comboboxIcon
+    color: var(--mantine-color-dark-7)
+  &:disabled
+    .comboboxIcon
+      color: var(--mantine-color-dark-1)
+      
+.option
+  display: flex
+  align-items: center
+  gap: variables.$spacing-4
+  @include fonts.font-pair(16, 24)
+  color: var(--mantine-color-base-9)
+  &[data-combobox-active]
+    background-color: colors.$clr_background-alt
+
+.checkmark
+  margin-left: auto
+  color: var(--mantine-color-base-6)
+
+.placeholder
+  color: var(--mantine-color-dark-4)
+
+.error
+  @include fonts.font-pair(14, 20)
+
+.shadow
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1)
+
+.inputError
+  border-color: var(--mantine-color-red-6)

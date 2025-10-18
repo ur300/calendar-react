@@ -1,0 +1,20 @@
+@use '@/styles/variables'
+@use '@/styles/fonts'
+
+.dropdown
+  padding: variables.$spacing-4
+
+.option
+  display: flex
+  align-items: center
+  gap: variables.$spacing-8
+  padding: variables.$spacing-8 variables.$spacing-8
+  @include fonts.font-pair(16, 24)
+.calendarDot
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  width: 16px
+  height: 16px
+
+

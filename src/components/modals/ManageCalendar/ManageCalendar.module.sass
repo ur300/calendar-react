@@ -1,0 +1,20 @@
+@use '@/styles/variables'
+@use '@/styles/fonts';
+
+.segmentedControl
+  margin-bottom: variables.$spacing-24
+
+.title
+  @include fonts.font-pair(18, 24)
+  margin-bottom: variables.$spacing-16
+
+.skeleton
+  height: 76px
+  margin-bottom: variables.$spacing-8
+
+.formActions
+  display: flex
+  justify-content: flex-end
+  gap: variables.$spacing-16
+  margin-top: variables.$spacing-16
+  padding-bottom: variables.$spacing-32

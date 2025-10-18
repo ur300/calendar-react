@@ -1,0 +1,12 @@
+@use '@/styles/fonts'
+
+.timeSlotText
+  position: absolute
+  left: 0
+  top: 4px
+  @include fonts.font-pair(12, 18)
+  color: var(--mantine-color-base-8)
+  font-weight: 400
+
+.isCurrentHour
+  color: var(--mantine-color-white)

@@ -1,0 +1,28 @@
+@use 'sass:math'
+
+$scrollbar-size: 6px
+$scrollbar-color-track: var(--mantine-color-base-2)
+$scrollbar-color-thumb: var(--mantine-color-base-3)
+$scrollbar-color-thumb-hover: var(--mantine-color-base-4)
+$scrollbar-color-thumb-active: var(--mantine-color-base-5)
+
+::-webkit-scrollbar
+  width: $scrollbar-size
+  height: $scrollbar-size
+
+::-webkit-scrollbar-track
+  background: $scrollbar-color-track
+
+::-webkit-scrollbar-thumb
+  background: $scrollbar-color-thumb
+
+  &:hover
+    background: $scrollbar-color-thumb-hover
+
+  &:active
+    background: $scrollbar-color-thumb-active
+
+
+::-webkit-scrollbar-thumb:horizontal,
+::-webkit-scrollbar-track:horizontal
+  border-radius: math.div($scrollbar-size, 2)

@@ -1,0 +1,61 @@
+@use '@/styles/colors'
+@use '@/styles/variables'
+@use '@/styles/fonts'
+@use '@/styles/mixins'
+
+.headerContainer
+  flex-shrink: 0
+
+.calendarHeader
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: .75rem 1rem
+  height: 80px
+  flex-shrink: 0
+  gap: 1rem
+  
+.calendarSubHeader
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 0 1rem
+  flex-shrink: 0
+
+.calendarHeaderLeft
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  flex: 1
+
+.calendarHeaderCenter
+  display: flex
+  justify-content: center
+  align-items: center
+  min-width: 0
+  flex: 0 0 auto
+
+.calendarHeaderRight
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  flex: 1
+  gap: 0.5rem
+
+.calendarNavigation
+  margin-bottom: 1rem
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.searchInput
+  max-width: 240px
+
+.todayButton
+  color: colors.$clr_text-base !important
+
+.navIcon
+  color: colors.$clr_text-base !important
+
+.calendarHeaderTitle
+  color: var(--mantine-color-base-9)

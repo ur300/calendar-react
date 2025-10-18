@@ -1,0 +1,31 @@
+.dayView
+  display: flex
+  flex-direction: column
+  height: 100%
+  position: relative
+
+.timeSlot
+  position: relative
+  height: 60px
+  border-bottom: 1px solid var(--mantine-color-base-2)
+  padding: 4px 0
+  
+.timelineView
+  position: relative
+  height: 100vh
+
+.currentHour
+  background-color: rgba(255, 0, 0, 0.05)
+  border-left: 3px solid var(--mantine-color-fail-5)
+
+.currentHourBadge
+  position: absolute
+  right: 8px
+  top: 4px
+  background-color: var(--mantine-color-fail-5)
+  color: white
+  padding: 2px 6px
+  border-radius: 4px
+  font-size: 10px
+  font-weight: 600
+  z-index: 2

@@ -1,0 +1,77 @@
+@use '@/styles/fonts'
+
+.calendarHeader
+  display: none
+
+.monthTile
+  cursor: pointer
+
+.monthTitle
+  @include fonts.font-pair(14, 18)
+  text-align: center
+
+.day
+  &:not(.hasEvents)
+    cursor: default
+    &:hover
+      background-color: transparent !important
+
+.today
+  background-color: var(--mantine-color-brand-5)
+  color: var(--mantine-color-white)
+  border-radius: 4px
+
+// Keep today's highlight on hover (override Mantine hover styles)
+.monthTile :global(button[data-today]:hover)
+  background-color: var(--mantine-color-brand-5) !important
+  color: var(--mantine-color-white) !important
+
+// Override Mantine default weekend red color
+.monthTile :global(button[data-weekend])
+  color: var(--mantine-color-text) !important
+
+// Outside days color override
+.monthTile :global(button[data-outside])
+  color: var(--mantine-color-base-7) !important
+
+.dayButton
+  all: unset
+  cursor: pointer
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  height: 100%
+
+.eventsList
+  display: flex
+  flex-direction: column
+  gap: 6px
+
+.eventItem
+  display: flex
+  align-items: center
+  gap: 8px
+
+.eventDot
+  width: 8px
+  height: 8px
+  border-radius: 50%
+
+.eventText
+  @include fonts.font-pair(12, 16)
+  font-weight: 700
+
+.eventTime
+  @include fonts.font-pair(11, 14)
+
+.screenReaderOnly
+  position: absolute
+  width: 1px
+  height: 1px
+  padding: 0
+  margin: -1px
+  overflow: hidden
+  clip: rect(0, 0, 0, 0)
+  white-space: nowrap
+  border: 0

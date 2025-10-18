@@ -1,0 +1,36 @@
+@use '@/styles/fonts'
+
+.weekView
+  display: flex
+  flex-direction: column
+  height: 100%
+
+.timelineView
+  position: relative
+  height: 100%
+  flex: 1
+
+.firstCol
+  flex: 0 0 65px
+  max-width: 65px
+
+.dayCol
+  flex: 1 1 0
+  max-width: unset
+
+.timeSlotCol
+  height: 60px
+  border-right: 1px solid var(--mantine-color-base-2)
+  position: relative
+
+.allDayText
+  text-align: center
+  color: var(--mantine-color-base-8)
+
+.allDayCol
+  display: flex
+  justify-content: center
+  align-items: center
+
+.row
+  border-bottom: 1px solid var(--mantine-color-base-2)

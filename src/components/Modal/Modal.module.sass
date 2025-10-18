@@ -1,0 +1,20 @@
+@use '@/styles/fonts'
+@use '@/styles/variables'
+
+.modalTitle
+  @include fonts.font-pair(20, 28)
+  font-weight: 600
+  font-family: fonts.$font-family-accent
+
+.modalHeader
+  padding: variables.$spacing-24 variables.$spacing-32
+
+.modalContent
+  padding:0 variables.$spacing-32
+
+.modalFooter
+  display: flex
+  justify-content: flex-end
+  gap: variables.$spacing-20
+  background-color: var(--mantine-color-base-1)
+  padding: variables.$spacing-24 variables.$spacing-32 

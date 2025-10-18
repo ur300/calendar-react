@@ -1,0 +1,64 @@
+@use '@/styles/fonts'
+
+.dayCellEvents
+  height: 80px
+  width: 100%
+
+.dayCellEvent
+  cursor: pointer
+  padding: 4px
+  overflow: visible
+  white-space: normal
+
+.dayCellMore
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  display: flex
+  justify-content: center
+  align-items: center
+
+.dayCellMoreIcon
+  color: var(--mantine-color-base-6)
+
+.dayCell
+  height: 130px
+  padding: 6px 6px 0 6px
+  display: flex
+  flex-direction: column
+  align-items: center
+  border: 0
+  border-right: 1px solid var(--mantine-color-base-2)
+  border-bottom: 1px solid var(--mantine-color-base-2)
+  position: relative
+
+.dayCellBadge
+  @include fonts.font-pair(14, 18)
+  margin-bottom: 2px
+  &.isNotCurrentMonth
+    color: var(--mantine-color-base-4)
+
+.dayCellEventsContainer
+  display: flex
+  flex-direction: column
+  gap: 2px
+
+.dayCellTitleContainer
+  display: flex
+  align-items: center
+  position: relative
+  z-index: 2
+
+.dayCellEventTitle
+  font-weight: 700
+
+.dayCellEventTime
+  flex-shrink: 0
+  padding-left: 4px
+
+.dayCellEventAllDay
+  position: relative
+
+.dayCellEventAllDayIcon
+  margin-right: 4px

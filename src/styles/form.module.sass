@@ -1,0 +1,21 @@
+@use '@/styles/variables'
+@use '@/styles/fonts'
+
+.formRow
+  margin-bottom: variables.$spacing-16
+
+.input:not(button)
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1)
+  @include fonts.font-pair(16, 22)
+  &::placeholder
+    color: var(--mantine-color-base-5) 
+
+.label
+  @include fonts.font-pair(16, 22)
+  margin-bottom: variables.$spacing-4
+
+.description
+  font-size: variables.$font-size-sm
+
+.rightAlignedDescription
+  text-align: right

@@ -1,0 +1,93 @@
+﻿@use 'sass:math'
+@use './colors'
+@use './mixins'
+
+@function precision-divide($number, $divisor, $precision: 5)
+  $result: math.div($number, $divisor)
+  $multiplier: math.pow(10, $precision)
+  @return math.div(math.round($result * $multiplier), $multiplier)
+
+@mixin font-pair($fontSize, $lineHeight)
+  font-size: #{math.div($fontSize, 16)}rem
+  line-height: #{precision-divide($lineHeight, $fontSize)}
+
+$font-family-primary: Lato, Arial, sans-serif
+$font-family-accent: Poppins, Arial, sans-serif
+
+$font-weight-normal: 400
+$font-weight-medium: 500
+$font-weight-semibold: 600
+$font-weight-bold: 700
+
+@mixin text_title($order:   1)
+  font-family: $font-family-accent
+  
+  @if $order == 1
+    @include font-pair(72, 90)
+  @else if $order == 2
+    @include font-pair(60, 72)
+  @else if $order == 3
+    @include font-pair(48, 60)
+  @else if $order == 4
+    @include font-pair(36, 44)
+  @else if $order == 5
+    @include font-pair(30, 28)
+  @else if $order == 6
+    @include font-pair(24, 32)
+
+// Keep in sync with theme styles for a Text component
+@mixin text_content($size)
+  font-family: $font-family-primary
+
+  @if $size == 'xs'
+    @include font-pair(12, 18)
+  @else if $size == 'sm'
+    @include font-pair(14, 20)
+  @else if $size == 'md'
+    @include font-pair(16, 24)
+  @else if $size == 'lg'
+    @include font-pair(18, 28)
+  @else if $size == 'xl'
+    @include font-pair(20, 30)
+
+// Fonts to use
+@mixin text_title-decorated
+  @include font-pair(38, 57)
+  font-weight: $font-weight-medium
+
+@mixin text_page-title
+  @include font-pair(24, 32)
+  font-family: $font-family-accent
+  color: colors.$clr_title
+  font-weight: $font-weight-medium
+
+@mixin text_page-title-sub
+  @include font-pair(16, 24)
+  color: colors.$clr_text-brief
+  // font-weight: $font-weight-medium
+
+@mixin text_brief
+  @include text_content('md')
+  
+  color: colors.$clr_text-brief
+  font-weight: $font-weight-normal
+
+@mixin brand_link
+  color: colors.$clr_link
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+    cursor: pointer
+
+@mixin text_meta($isCompact: false)
+  color: var(--mantine-color-base-6)
+
+  @include text_content($size: 'sm')
+  
+  @if $isCompact
+    @include text_content($size: 'xs')
+
+@mixin text_list-instance-title
+  font-family: $font-family-primary
+  @include text_content($size: 'lg')
+  font-weight: $font-weight-medium

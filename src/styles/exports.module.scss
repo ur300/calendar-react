@@ -1,0 +1,62 @@
+// We are using scss file (not sass) to be able to export variables to the *.tsx files
+@use './colors';
+@use './fonts';
+@use './variables';
+
+:export {
+  colorBg: colors.$clr_background;
+
+  breakpointXS: variables.$breakpoint-xs;
+  breakpointSM: variables.$breakpoint-sm;
+  breakpointMD: variables.$breakpoint-md;
+  breakpointLG: variables.$breakpoint-lg;
+  breakpointXL: variables.$breakpoint-xl;
+
+  spacingXXS: variables.$spacing-4;
+  spacingXS: variables.$spacing-8;
+  spacingSM: variables.$spacing-12;
+  spacingMD: variables.$spacing-16;
+  spacingLG: variables.$spacing-20;
+  spacingXL: variables.$spacing-24;
+  spacingXXL: variables.$spacing-32;
+
+  fontFamilyPrimary: fonts.$font-family-primary;
+  fontFamilyAccent: fonts.$font-family-accent;
+  fontWeightNormal: fonts.$font-weight-normal;
+  fontWeightMedium: fonts.$font-weight-medium;
+  fontWeightSemibold: fonts.$font-weight-semibold;
+  fontWeightBold: fonts.$font-weight-bold;
+
+  controlSizeXS: variables.$control-size-xs;
+  controlSizeSM: variables.$control-size-sm;
+  controlSizeMD: variables.$control-size-md;
+  controlSizeLG: variables.$control-size-lg;
+  controlSizeXL: variables.$control-size-xl;
+
+  controlSizeCompactXS: variables.$control-size-compact-xs;
+  controlSizeCompactSM: variables.$control-size-compact-sm;
+  controlSizeCompactMD: variables.$control-size-compact-md;
+  controlSizeCompactLG: variables.$control-size-compact-lg;
+  controlSizeCompactXL: variables.$control-size-compact-xl;
+
+  controlXSpacing: variables.$control-x-spacing;
+
+  fontFamilyTitle: fonts.$font-family-accent;
+
+  fontSizeXS: variables.$font-size-xs;
+  fontSizeSM: variables.$font-size-sm;
+  fontSizeMD: variables.$font-size-md;
+  fontSizeLG: variables.$font-size-lg;
+  fontSizeXL: variables.$font-size-xl;
+
+  checkboxSizeXS: variables.$checkbox-size-xs;
+  checkboxSizeSM: variables.$checkbox-size-sm;
+  checkboxSizeMD: variables.$checkbox-size-md;
+  checkboxSizeLG: variables.$checkbox-size-lg;
+  checkboxSizeXL: variables.$checkbox-size-xl;
+
+  tableCellPadding: variables.$table-cell-padding;
+
+  headerHeight: variables.$header-height;
+  borderRadius: variables.$border-radius;
+}
